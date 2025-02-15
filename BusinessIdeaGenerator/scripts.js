@@ -5,7 +5,8 @@ const ideaDisplay = document.querySelector("#idea-display")
 const savedIdeasList = document.querySelector("#saved-ideas")
 
 // array with business ideas (add more)
-const businessIdeaArray = ["VC-backed landscaping marketplace", "Bootstrapped ancient text library"]
+const businessIdeaArray = ["VC-backed landscaping marketplace", 
+    "Bootstrapped ancient text library"]
 
 // generate idea event
 generateBtn.addEventListener('click', e => {
@@ -17,6 +18,13 @@ generateBtn.addEventListener('click', e => {
 })
 
 // save idea event
+saveBtn.addEventListener('click', () => {
+    // create item
+    const item = document.createElement('p')
+    item.innerHTML = ideaDisplay.innerHTML
+    // add item to list 
+    savedIdeasList.appendChild(item)
+})
 
 // get random string from array to display
 function getRandomStr (array) {

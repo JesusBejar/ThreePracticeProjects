@@ -12,12 +12,19 @@ async function getAQuote() {
         // console.log(response)
         const json = await response.json()
         const quote = json.text
-        console.log(quote)
+        const author = json.author
+        // console.log(quote)
+        return `${quote} - ${author}`
     } catch (e) {
         console.error(e)
     }
-
 }
 
+
 // fetch quote event
-getBtn.addEventListener('click', getAQuote)
+getBtn.addEventListener('click', async () => {
+    const quote = await getAQuote()
+    quoteDisplay.innerHTML = quote
+})
+
+// save quote event

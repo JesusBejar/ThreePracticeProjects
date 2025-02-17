@@ -35,3 +35,5 @@ saveBtn.addEventListener('click', () => {
     savedQuotes.appendChild(item)
     // add remove from list functionality
 })
+
+// future functionality -> add text-to-speech capability

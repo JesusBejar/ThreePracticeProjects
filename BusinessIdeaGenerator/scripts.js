@@ -24,6 +24,7 @@ saveBtn.addEventListener('click', () => {
     item.innerHTML = ideaDisplay.innerHTML
     // add item to list 
     savedIdeasList.appendChild(item)
+    // add remove from list functionality
 })
 
 // get random string from array to display
@@ -34,3 +35,5 @@ function getRandomStr (array) {
       const randomIndex = Math.floor(Math.random() * array.length);
       return array[randomIndex]
 }
+
+// future functionality -> implement categories to filter

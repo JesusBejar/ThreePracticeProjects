@@ -20,7 +20,6 @@ async function getAQuote() {
     }
 }
 
-
 // fetch quote event
 getBtn.addEventListener('click', async () => {
     const quote = await getAQuote()
@@ -28,3 +27,11 @@ getBtn.addEventListener('click', async () => {
 })
 
 // save quote event
+saveBtn.addEventListener('click', () => {
+    // create item
+    const item = document.createElement('p')
+    item.innerHTML = quoteDisplay.innerHTML
+    // add item to list 
+    savedQuotes.appendChild(item)
+    // add remove from list functionality
+})

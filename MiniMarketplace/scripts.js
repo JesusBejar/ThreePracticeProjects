@@ -22,3 +22,4 @@ submitBtn.addEventListener('click', (e) => {
 })
 
 // future functionality -> error catchs and delete funcionality
+// come back and add funcionality quotes 
